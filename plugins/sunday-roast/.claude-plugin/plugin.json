@@ -1,0 +1,10 @@
+{
+  "name": "sunday-roast",
+  "version": "1.0.0",
+  "description": "A weekly review of your own work, narrated by Chef the chicken. Private by default, with a safe share flow.",
+  "author": { "name": "Andrew Purnell", "url": "https://github.com/andpurnell-code" },
+  "homepage": "https://sundayroast.me",
+  "repository": "https://github.com/andpurnell-code/sunday-roast",
+  "license": "MIT",
+  "keywords": ["review", "weekly", "reflection", "humour"]
+}
