@@ -1,0 +1,3 @@
+(function(){var b=document.querySelectorAll('[data-copy]');for(var i=0;i<b.length;i++){b[i].addEventListener('click',function(e){var t=e.currentTarget,x=t.getAttribute('data-copy');function ok(){t.textContent='Copied';setTimeout(function(){t.textContent='Copy'},1600)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(x).then(ok,function(){sel(t)})}else{sel(t)}})}
+function sel(t){var c=t.previousElementSibling,r=document.createRange();r.selectNodeContents(c);var s=getSelection();s.removeAllRanges();s.addRange(r);t.textContent='Press Ctrl or Cmd+C';setTimeout(function(){t.textContent='Copy'},2500)}})();
