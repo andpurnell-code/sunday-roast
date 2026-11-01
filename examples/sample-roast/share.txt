@@ -1,0 +1,21 @@
+A good, busy week: three teams agreed an order for a migration nobody wanted to start, and a stack of small fixes is waiting for review.
+
+Starter
+A migration two teams each thought belonged to the other ended up with a plan by Wednesday. Writing it down counts as volunteering.
+
+Main
+Small accounts first, large ones later, and the dates shared early. The rollout calendar appeared within a day.
+
+Burnt bits
+A pile of fixes is still waiting for a reviewer. Somebody has not been told yet.
+
+Leftovers
+The cut-over dates meet reality next week.
+
+Compliments to the chef
+Three teams agreeing an order, and a plan someone could build from.
+
+Chef's notes
+Name a reviewer for each fix. Rehearse one cut-over date.
+
+Your week, served with a side of sarcasm.  sundayroast.me

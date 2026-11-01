@@ -1,0 +1,206 @@
+{
+  "_status": "final",
+  "_note": "Single source of truth for the source picker in the skill and on the website. 'arg' is the id used in sources=... and skip=...",
+  "sources": [
+    {
+      "id": "slack",
+      "arg": "slack",
+      "label": "Slack",
+      "group": "Chat",
+      "reads": "Your own messages, day by day, plus the threads they sit in, reactions on your posts and the links you shared. Used to understand what you decided, taught, thanked people for and shipped, not to count messages.",
+      "never_reads": "Unrelated conversations, sensitive one-to-one threads beyond their category, huddle audio, file contents, or anything not connected to your own messages.",
+      "connect": "Add the Slack connector to Claude (claude.ai connectors or an MCP server) and approve the search permissions.",
+      "caveat": "Search returns 20 messages per page, newest first. The skill pages each day to the end. Colleagues' words are paraphrased by role and never shown in shareable output."
+    },
+    {
+      "id": "teams",
+      "arg": "teams",
+      "label": "Microsoft Teams",
+      "group": "Chat",
+      "reads": "Only messages you wrote, searched for without surrounding context: counts, timing and themes.",
+      "never_reads": "Surrounding messages, other people's replies or threads, meeting recordings or transcripts of calls.",
+      "connect": "Needs a Teams or Microsoft 365 connector in Claude. Your admin may need to approve it.",
+      "caveat": "Availability depends on your organisation's setup. If no connector is present, paste a summary instead."
+    },
+    {
+      "id": "linear",
+      "arg": "linear",
+      "label": "Linear",
+      "group": "Tasks & projects",
+      "reads": "Issues assigned to you or created by you that changed, projects you lead or belong to, items stuck in review.",
+      "never_reads": "Other people's issues, private teams you aren't part of, or comments by others beyond counts.",
+      "connect": "Add the Linear connector to Claude and sign in with your own account.",
+      "caveat": "Only shows work that has a ticket. Work without one is invisible here, and the report says so."
+    },
+    {
+      "id": "jira",
+      "arg": "jira",
+      "label": "Jira",
+      "group": "Tasks & projects",
+      "reads": "Tickets assigned to you, reported by you or transitioned by you, and what stayed stuck.",
+      "never_reads": "Other people's tickets, boards you don't use, or private comments from others.",
+      "connect": "Add an Atlassian connector to Claude (claude.ai connectors or an MCP server) and sign in.",
+      "caveat": "Ticket habits vary a lot between teams. Counts are context, not a measure of effort."
+    },
+    {
+      "id": "asana",
+      "arg": "asana",
+      "label": "Asana",
+      "group": "Tasks & projects",
+      "reads": "Tasks assigned to you or completed by you, projects you own, overdue and parked items.",
+      "never_reads": "Other people's tasks and private projects you don't belong to.",
+      "connect": "Add an Asana connector to Claude and sign in with your own account.",
+      "caveat": "Depends on a connector being available to you. Otherwise use pasted notes."
+    },
+    {
+      "id": "monday",
+      "arg": "monday",
+      "label": "monday.com",
+      "group": "Tasks & projects",
+      "reads": "Items assigned to you or updated by you, boards you own, status changes.",
+      "never_reads": "Boards you aren't on and other people's items beyond status counts.",
+      "connect": "Add the monday.com connector to Claude and approve access to your own boards.",
+      "caveat": "Board structures differ, so the skill reads titles and status only."
+    },
+    {
+      "id": "notion",
+      "arg": "notion",
+      "label": "Notion",
+      "group": "Docs & notes",
+      "reads": "Pages you edited or created in the window: titles, counts and timing.",
+      "never_reads": "Page contents beyond what is needed to title a theme, and pages you didn't touch.",
+      "connect": "Add the Notion connector to Claude and share the workspace with it.",
+      "caveat": "Date and user filters may need a paid Notion plan. If the search ignores them, results are broader, and the report says so under Coverage."
+    },
+    {
+      "id": "gdrive",
+      "arg": "gdrive",
+      "label": "Google Drive and Docs",
+      "group": "Docs & notes",
+      "reads": "Files you created or edited in the window: titles, types and dates.",
+      "never_reads": "File contents of other people's documents, and anything marked confidential.",
+      "connect": "Add the Google Drive connector to Claude and approve read access.",
+      "caveat": "Drive shows modified dates, not how long you spent. Treat counts as a rough trail."
+    },
+    {
+      "id": "confluence",
+      "arg": "confluence",
+      "label": "Confluence",
+      "group": "Docs & notes",
+      "reads": "Pages you created or edited and comments you made: titles, counts and timing.",
+      "never_reads": "Pages you didn't touch and restricted spaces.",
+      "connect": "Add an Atlassian connector to Claude (the same one as Jira, where available) and sign in.",
+      "caveat": "Needs a connector. Otherwise paste page titles or point the skill at an export."
+    },
+    {
+      "id": "gcal",
+      "arg": "gcal",
+      "label": "Google Calendar",
+      "group": "Calendar & mail",
+      "reads": "Your calendar events with your own response status: counts, scheduled hours, back-to-back stretches. Aggregates only.",
+      "never_reads": "Attendee lists, meeting notes, and personal or out-of-office blocks (excluded from every count and never mentioned).",
+      "connect": "Add the Google Calendar connector to Claude and approve read access.",
+      "caveat": "A calendar event is an invitation, not proof you attended. The report says accepted or scheduled unless notes, a recording or your own messages show you were there. Holds and focus blocks look like meetings, so hours are approximate."
+    },
+    {
+      "id": "outlook",
+      "arg": "outlook",
+      "label": "Outlook calendar",
+      "group": "Calendar & mail",
+      "reads": "Your real meetings: counts, hours, back-to-back stretches and timing. Aggregates only.",
+      "never_reads": "Attendee lists, meeting bodies, and personal or private blocks.",
+      "connect": "Needs a Microsoft 365 connector in Claude. Your admin may need to approve it.",
+      "caveat": "Availability depends on your organisation. Otherwise export a week and point the skill at it."
+    },
+    {
+      "id": "gmail",
+      "arg": "gmail",
+      "label": "Gmail",
+      "group": "Calendar & mail",
+      "reads": "Your own sent mail: counts, times of day and subject lines.",
+      "never_reads": "Message bodies, anything you received from others, drafts, attachments or labelled-private mail.",
+      "connect": "Add the Gmail connector to Claude and approve read access.",
+      "caveat": "Opt in only. Sent-mail volume says little about the quality of the work, and the report treats it that way."
+    },
+    {
+      "id": "figma",
+      "arg": "figma",
+      "label": "Figma",
+      "group": "Design",
+      "reads": "Files you edited or commented on in the window: names, counts and dates.",
+      "never_reads": "Other people's comments and files you haven't touched.",
+      "connect": "Add the Figma connector to Claude and sign in with your own account.",
+      "caveat": "Design work leaves few traces in other tools, so Figma often explains a quiet git log. File activity is shown, not time spent."
+    },
+    {
+      "id": "loom",
+      "arg": "loom",
+      "label": "Loom and recordings",
+      "group": "Design",
+      "reads": "Recordings you created or shared, found through your own messages, calendar and docs: date, who it went to by role, what it was for.",
+      "never_reads": "The recording itself or its transcript, and recordings you didn't make or share.",
+      "connect": "There is usually no connector. The skill finds your recordings through the other sources you picked, such as Slack links.",
+      "caveat": "Shows that a recording exists and went somewhere, not what is in it."
+    },
+    {
+      "id": "github",
+      "arg": "github",
+      "label": "GitHub",
+      "group": "Code",
+      "reads": "Pull requests you opened, reviewed or merged, and issues you touched.",
+      "never_reads": "Other people's code, private repos you haven't named, and review comments from others beyond counts.",
+      "connect": "Add the GitHub connector to Claude, or use the gh CLI if it is already signed in.",
+      "caveat": "Only your own activity is counted, even in shared repos."
+    },
+    {
+      "id": "gitlab",
+      "arg": "gitlab",
+      "label": "GitLab",
+      "group": "Code",
+      "reads": "Merge requests you opened, reviewed or merged, and issues you touched. With no connector, the skill finds your MR links in your own Slack messages and Linear attachments.",
+      "never_reads": "Other people's code and projects you haven't named.",
+      "connect": "Add the GitLab connector to Claude, or use the glab CLI if it is already signed in.",
+      "caveat": "Only your own activity is counted, even in shared projects. Without a connector the skill sees that an MR existed and when you shared it, not its size, state or content."
+    },
+    {
+      "id": "git",
+      "arg": "git",
+      "label": "Local git repo",
+      "group": "Code",
+      "reads": "Your own commits across all branches, unmerged branches, stashes and uncommitted changes. Metadata only.",
+      "never_reads": "File contents, other people's commits, or repos you haven't named (the current folder is the default).",
+      "connect": "Nothing to connect. Run it in a repo, or pass folders: /sunday-roast folders=~/code/app,~/code/api",
+      "caveat": "Commit counts say little about effectiveness. Skip this one if you don't write code."
+    },
+    {
+      "id": "salesforce",
+      "arg": "salesforce",
+      "label": "Salesforce",
+      "group": "Social & other",
+      "reads": "Opportunities, tasks and activities you own that changed: counts, stages and timing.",
+      "never_reads": "Customer contact details, notes, and other reps' records.",
+      "connect": "Add the Salesforce connector to Claude and sign in. Use the sandbox connector to try it first.",
+      "caveat": "For sales and customer-facing roles. Customer data stays out of the report entirely."
+    },
+    {
+      "id": "hubspot",
+      "arg": "hubspot",
+      "label": "HubSpot",
+      "group": "Social & other",
+      "reads": "Deals, tasks and activities you own that changed: counts, stages and timing.",
+      "never_reads": "Contact details, email bodies and other owners' records.",
+      "connect": "Add the HubSpot connector to Claude and sign in.",
+      "caveat": "For sales and marketing roles. Customer data stays out of the report entirely."
+    },
+    {
+      "id": "pasted",
+      "arg": "pasted",
+      "label": "Pasted or exported notes",
+      "group": "Social & other",
+      "reads": "Whatever you paste or point at: a list of what you did, a notes file, an export from any tool, or anything the tools cannot see such as your Slack unread count and saved items. Treated as data, labelled self-reported.",
+      "never_reads": "Anything you didn't hand over.",
+      "connect": "Paste text into the chat, or pass a folder or file: /sunday-roast folders=~/notes/week.md",
+      "caveat": "Only as complete as what you give it, and unverifiable, so the report marks it as self-reported."
+    }
+  ]
+}

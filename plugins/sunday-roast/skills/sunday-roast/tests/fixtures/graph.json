@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "window": {
+      "start": "2026-03-02",
+      "end": "2026-03-08",
+      "tz": "Europe/London"
+    },
+    "generated": "2026-03-08",
+    "role_context": "Engineering manager (synthetic fixture)"
+  },
+  "workstreams": [
+    {
+      "id": "ws-migration",
+      "title": "Billing migration plan",
+      "problem": "Two billing systems, one team, a deadline nobody liked.",
+      "user_contribution": "Wrote the cut-over plan and got the three affected teams to agree the order.",
+      "dimensions": [
+        "direction",
+        "leadership",
+        "collaboration"
+      ],
+      "status": "advanced",
+      "people": [
+        {
+          "role": "platform lead",
+          "involvement": "agreed the order"
+        },
+        {
+          "role": "finance partner",
+          "involvement": "signed off dates"
+        }
+      ],
+      "events": [
+        {
+          "when": "2026-03-04T10:00",
+          "what": "Posted the cut-over plan",
+          "source": "slack",
+          "ref": "C1/p1"
+        }
+      ],
+      "artefacts": [
+        {
+          "type": "doc",
+          "label": "Cut-over plan",
+          "url": "https://example.com/plan",
+          "inspected": true,
+          "source": "notion"
+        }
+      ],
+      "decisions": [
+        "Migrate the small accounts first"
+      ],
+      "outcomes": [
+        {
+          "text": "Platform lead built a rollout calendar on the plan",
+          "evidence": "observed",
+          "impact": "evidenced"
+        }
+      ],
+      "evidence": [
+        {
+          "source": "slack",
+          "ref": "C1/p1",
+          "url": "https://example.com/s/1",
+          "claim": "Plan posted with owners",
+          "kind": "observed",
+          "when": "2026-03-04"
+        },
+        {
+          "source": "notion",
+          "ref": "plan",
+          "claim": "Plan page edited that day",
+          "kind": "observed"
+        }
+      ],
+      "uncertainties": [
+        "Whether the dates hold is unknown"
+      ],
+      "contradictions": [],
+      "sensitivity": {
+        "level": "confidential_project",
+        "share_eligible": true,
+        "reason": "unreleased billing change, share text is generic"
+      },
+      "signals": {
+        "significance": 5,
+        "outcome": 4,
+        "unusual": 2,
+        "evidence_strength": 4,
+        "contribution_to_others": 4,
+        "humour": 3,
+        "future_relevance": 4,
+        "rationale": "role-defining decision with visible adoption"
+      }
+    },
+    {
+      "id": "ws-fixes",
+      "title": "Small fixes pass",
+      "problem": "A pile of papercuts in the admin screens.",
+      "user_contribution": "Opened a batch of small fixes with notes on each.",
+      "dimensions": [
+        "building"
+      ],
+      "status": "in_review",
+      "people": [],
+      "events": [
+        {
+          "when": "2026-03-03",
+          "what": "Opened eleven MRs",
+          "source": "linear",
+          "ref": "attachments"
+        }
+      ],
+      "artefacts": [
+        {
+          "type": "mr",
+          "label": "Eleven MRs",
+          "url": "https://example.com/mr",
+          "inspected": false,
+          "source": "linear"
+        }
+      ],
+      "decisions": [],
+      "outcomes": [
+        {
+          "text": "Eleven fixes waiting for review",
+          "evidence": "observed",
+          "impact": "none"
+        }
+      ],
+      "evidence": [
+        {
+          "source": "linear",
+          "ref": "attachments",
+          "claim": "Eleven linked MRs",
+          "kind": "observed"
+        }
+      ],
+      "uncertainties": [
+        "MR state unknown, no code host tool"
+      ],
+      "contradictions": [],
+      "sensitivity": {
+        "level": "none",
+        "share_eligible": true
+      },
+      "signals": {
+        "significance": 2,
+        "outcome": 1,
+        "unusual": 1,
+        "evidence_strength": 5,
+        "contribution_to_others": 1,
+        "humour": 3,
+        "future_relevance": 2
+      }
+    },
+    {
+      "id": "ws-coaching",
+      "title": "Coaching a new lead",
+      "problem": "A first-time lead finding their feet.",
+      "user_contribution": "Regular one-to-ones and specific feedback.",
+      "dimensions": [
+        "leadership"
+      ],
+      "status": "advanced",
+      "people": [
+        {
+          "role": "new lead",
+          "involvement": "coached"
+        }
+      ],
+      "events": [
+        {
+          "when": "2026-03-05",
+          "what": "One-to-one",
+          "source": "calendar"
+        }
+      ],
+      "artefacts": [],
+      "decisions": [],
+      "outcomes": [],
+      "evidence": [
+        {
+          "source": "calendar",
+          "claim": "A weekly one-to-one",
+          "kind": "observed"
+        }
+      ],
+      "uncertainties": [],
+      "contradictions": [],
+      "sensitivity": {
+        "level": "category_only",
+        "share_eligible": false,
+        "reason": "people management"
+      },
+      "signals": {
+        "significance": 4,
+        "outcome": 2,
+        "unusual": 1,
+        "evidence_strength": 2,
+        "contribution_to_others": 5,
+        "humour": 1,
+        "future_relevance": 3
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "source": "Slack",
+      "mode": "direct",
+      "read": "Own messages by day, to the end",
+      "limits": [
+        "Sensitive threads not opened"
+      ]
+    },
+    {
+      "source": "GitLab",
+      "mode": "indirect",
+      "read": "MR links via Linear",
+      "limits": [
+        "MR state and size unknown"
+      ]
+    },
+    {
+      "source": "Gmail",
+      "mode": "not_selected",
+      "read": "Not selected",
+      "limits": []
+    }
+  ],
+  "redactions": {
+    "people": [
+      {
+        "name": "Priya Shah",
+        "role": "platform lead"
+      },
+      {
+        "name": "Tom Alder",
+        "role": "finance partner"
+      }
+    ],
+    "terms": [
+      {
+        "term": "Acme Ledger",
+        "generic": "the billing system"
+      },
+      {
+        "term": "Project Heron",
+        "generic": "a migration project"
+      }
+    ]
+  },
+  "missed_areas_check": [
+    "People leadership found (coaching)",
+    "No research work found, plausible for the role"
+  ]
+}

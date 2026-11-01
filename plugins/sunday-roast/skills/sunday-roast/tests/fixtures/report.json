@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "week_label": "2 to 8 March 2026",
+    "tagline": "Your week, served with a side of sarcasm.",
+    "positioning": "Celebrate the wins. Laugh at what went sideways. Start next week a little wiser.",
+    "domain": "sundayroast.me"
+  },
+  "chef": {
+    "state": "chef-juggling",
+    "reason": "Several things in flight, mostly kept up"
+  },
+  "verdict": {
+    "text": "A good week, and a busy one, which is often the same thing. You got three teams to agree an order for a migration nobody wanted to start, and eleven small fixes are waiting for someone to look at them. Both facts are true, and only one of them is your fault.",
+    "share": {
+      "text": "A good, busy week: three teams agreed an order for a migration nobody wanted to start, and a stack of small fixes is waiting for review.",
+      "include": true
+    }
+  },
+  "sections": [
+    {
+      "key": "starter",
+      "title": "Starter",
+      "paragraphs": [
+        "Monday opened with a billing migration that two teams each believed belonged to the other. By Wednesday it belonged to a plan with your name on it, which is how these things usually go.",
+        "Nobody volunteered. You wrote the thing down, which in most organisations counts as volunteering.",
+        "It is worth admiring how quietly this happened. There was no announcement, no kickoff and no slide with a rocket on it."
+      ],
+      "workstream_ids": [
+        "ws-migration"
+      ],
+      "share": {
+        "text": "A migration two teams each thought belonged to the other ended up with a plan by Wednesday. Writing it down counts as volunteering.",
+        "include": true
+      },
+      "disclosure": {
+        "sources": [
+          {
+            "name": "Slack",
+            "url": "https://example.com/s/1",
+            "opened": false
+          }
+        ],
+        "observed": [
+          "Plan posted with owners"
+        ],
+        "inferred": [
+          "Calendar built from the plan"
+        ],
+        "uncertainty": [
+          "Dates untested"
+        ],
+        "dates": "4 March"
+      }
+    },
+    {
+      "key": "main",
+      "title": "Main",
+      "paragraphs": [
+        "The plan itself was simple. Small accounts first, large ones later, finance told the dates before anyone else could be surprised by them. The platform lead built a rollout calendar from it within a day, which is the closest an engineer comes to a standing ovation.",
+        "The part worth mentioning is that three teams agreed to an order. That usually takes a meeting, then another meeting about the first meeting. You did it in one thread.",
+        "There was a decision in there too, and it was a sensible one. Start with the accounts nobody would miss if something went wrong, then work up to the ones that would call you at home. Boring, careful and exactly right. If every migration were planned this way, the industry would have far fewer stories to tell at conferences."
+      ],
+      "workstream_ids": [
+        "ws-migration"
+      ],
+      "share": {
+        "text": "Small accounts first, large ones later, and the dates shared early. The rollout calendar appeared within a day.",
+        "include": true
+      },
+      "disclosure": {
+        "sources": [
+          {
+            "name": "Slack",
+            "url": "https://example.com/s/1",
+            "opened": false
+          }
+        ],
+        "observed": [
+          "Plan posted with owners"
+        ],
+        "inferred": [
+          "Calendar built from the plan"
+        ],
+        "uncertainty": [
+          "Dates untested"
+        ],
+        "dates": "4 March"
+      }
+    },
+    {
+      "key": "side",
+      "title": "Sides",
+      "paragraphs": [
+        "You spent time with a new lead this week, and it shows up in the calendar as a weekly slot with a lot of the actual work happening around it. That kind of help rarely leaves a trail. It leaves a person who is slightly better at the job by Friday.",
+        "Elsewhere, a batch of small fixes went out for review. They are tidy, each one explains itself, and between them they remove a good deal of irritation from the admin screens.",
+        "Small contributions like these do not make a good headline. They do, however, make the next fortnight easier for a lot of people who will never know whom to thank."
+      ],
+      "workstream_ids": [
+        "ws-coaching",
+        "ws-fixes"
+      ],
+      "share": {
+        "text": "Time spent coaching a new lead, which rarely leaves a trail, plus a batch of tidy fixes that explain themselves.",
+        "include": false
+      },
+      "disclosure": {
+        "sources": [
+          {
+            "name": "Slack",
+            "url": "https://example.com/s/1",
+            "opened": false
+          }
+        ],
+        "observed": [
+          "Plan posted with owners"
+        ],
+        "inferred": [
+          "Calendar built from the plan"
+        ],
+        "uncertainty": [
+          "Dates untested"
+        ],
+        "dates": "4 March"
+      }
+    },
+    {
+      "key": "burnt",
+      "title": "Burnt bits",
+      "paragraphs": [
+        "Eleven of those fixes are still waiting. Eleven. Somebody is going to have to read them, and at the moment that somebody has not been told.",
+        "The fixes themselves are fine. It is the waiting that stings. A reviewer has been assumed, and assumed reviewers are famously unreliable at turning up."
+      ],
+      "workstream_ids": [
+        "ws-fixes"
+      ],
+      "share": {
+        "text": "A pile of fixes is still waiting for a reviewer. Somebody has not been told yet.",
+        "include": true
+      },
+      "disclosure": {
+        "sources": [
+          {
+            "name": "Slack",
+            "url": "https://example.com/s/1",
+            "opened": false
+          }
+        ],
+        "observed": [
+          "Plan posted with owners"
+        ],
+        "inferred": [
+          "Calendar built from the plan"
+        ],
+        "uncertainty": [
+          "Dates untested"
+        ],
+        "dates": "4 March"
+      }
+    },
+    {
+      "key": "leftovers",
+      "title": "Leftovers",
+      "paragraphs": [
+        "The cut-over dates have not been tested by contact with reality. That happens next week, and it tends to be less polite than a planning thread.",
+        "There is also the matter of the finance dates, which were shared early and agreed politely. Politely agreed dates are the first to move, so it is worth knowing who will say so when they do."
+      ],
+      "workstream_ids": [
+        "ws-migration"
+      ],
+      "share": {
+        "text": "The cut-over dates meet reality next week.",
+        "include": true
+      },
+      "disclosure": {
+        "sources": [
+          {
+            "name": "Slack",
+            "url": "https://example.com/s/1",
+            "opened": false
+          }
+        ],
+        "observed": [
+          "Plan posted with owners"
+        ],
+        "inferred": [
+          "Calendar built from the plan"
+        ],
+        "uncertainty": [
+          "Dates untested"
+        ],
+        "dates": "4 March"
+      }
+    },
+    {
+      "key": "compliments",
+      "title": "Compliments to the chef",
+      "paragraphs": [],
+      "workstream_ids": [
+        "ws-migration"
+      ],
+      "share": {
+        "text": "Three teams agreeing an order, and a plan someone could build from.",
+        "include": true
+      },
+      "items": [
+        "Getting three teams to agree an order without a second meeting.",
+        "Writing a plan the platform lead could build a calendar from.",
+        "Making time for a new lead, which nobody was going to schedule for you."
+      ]
+    },
+    {
+      "key": "specials",
+      "title": "Chef's notes",
+      "paragraphs": [],
+      "workstream_ids": [
+        "ws-fixes",
+        "ws-migration"
+      ],
+      "share": {
+        "text": "Name a reviewer for each fix. Rehearse one cut-over date.",
+        "include": true
+      },
+      "items": [
+        "Name a reviewer | Add a reviewer to each of the eleven fixes today, so the queue has an owner.",
+        "Test one date | Pick the first small-account cut-over and rehearse it before the plan meets the real world."
+      ],
+      "disclosure": {
+        "sources": [
+          {
+            "name": "Slack",
+            "url": "https://example.com/s/1",
+            "opened": false
+          }
+        ],
+        "observed": [
+          "Plan posted with owners"
+        ],
+        "inferred": [
+          "Calendar built from the plan"
+        ],
+        "uncertainty": [
+          "Dates untested"
+        ],
+        "dates": "4 March"
+      }
+    }
+  ]
+}

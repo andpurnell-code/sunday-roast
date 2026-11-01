@@ -1,0 +1,34 @@
+{
+  "chef": {
+    "state": "chef-juggling"
+  },
+  "tagline": "Your week, served with a side of sarcasm.",
+  "week_label": "2 to 8 March 2026",
+  "verdict": "A good, busy week: three teams agreed an order for a migration nobody wanted to start, and a stack of small fixes is waiting for review.",
+  "sections": [
+    {
+      "title": "Starter",
+      "text": "A migration two teams each thought belonged to the other ended up with a plan by Wednesday. Writing it down counts as volunteering."
+    },
+    {
+      "title": "Main",
+      "text": "Small accounts first, large ones later, and the dates shared early. The rollout calendar appeared within a day."
+    },
+    {
+      "title": "Burnt bits",
+      "text": "A pile of fixes is still waiting for a reviewer. Somebody has not been told yet."
+    },
+    {
+      "title": "Leftovers",
+      "text": "The cut-over dates meet reality next week."
+    },
+    {
+      "title": "Compliments to the chef",
+      "text": "Three teams agreeing an order, and a plan someone could build from."
+    },
+    {
+      "title": "Chef's notes",
+      "text": "Name a reviewer for each fix. Rehearse one cut-over date."
+    }
+  ]
+}

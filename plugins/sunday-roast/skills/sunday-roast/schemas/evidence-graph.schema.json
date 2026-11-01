@@ -1,0 +1,448 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sunday Roast evidence graph",
+  "type": "object",
+  "required": [
+    "meta",
+    "workstreams",
+    "coverage",
+    "redactions"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "window",
+        "generated"
+      ],
+      "properties": {
+        "window": {
+          "type": "object",
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "string"
+            },
+            "end": {
+              "type": "string"
+            },
+            "tz": {
+              "type": "string"
+            }
+          }
+        },
+        "generated": {
+          "type": "string"
+        },
+        "role_context": {
+          "type": "string"
+        }
+      }
+    },
+    "workstreams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "problem",
+          "user_contribution",
+          "dimensions",
+          "status",
+          "evidence",
+          "sensitivity",
+          "signals"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "problem": {
+            "type": "string"
+          },
+          "user_contribution": {
+            "type": "string"
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "building",
+                "leadership",
+                "collaboration",
+                "direction",
+                "learning",
+                "impact"
+              ]
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "shipped",
+              "advanced",
+              "in_review",
+              "blocked",
+              "parked",
+              "unknown"
+            ]
+          },
+          "people": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "role",
+                "involvement"
+              ],
+              "properties": {
+                "role": {
+                  "type": "string"
+                },
+                "involvement": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "when",
+                "what",
+                "source"
+              ],
+              "properties": {
+                "when": {
+                  "type": "string"
+                },
+                "what": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "ref": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "artefacts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "label",
+                "inspected"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "inspected": {
+                  "type": "boolean"
+                },
+                "source": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "decisions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "outcomes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "text",
+                "evidence",
+                "impact"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "string",
+                  "enum": [
+                    "observed",
+                    "inferred"
+                  ]
+                },
+                "impact": {
+                  "type": "string",
+                  "enum": [
+                    "evidenced",
+                    "plausible",
+                    "none"
+                  ]
+                }
+              }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "source",
+                "claim",
+                "kind"
+              ],
+              "properties": {
+                "source": {
+                  "type": "string"
+                },
+                "ref": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "claim": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "observed",
+                    "inferred"
+                  ]
+                },
+                "when": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contradictions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sensitivity": {
+            "type": "object",
+            "required": [
+              "level",
+              "share_eligible"
+            ],
+            "properties": {
+              "level": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "category_only",
+                  "confidential_project",
+                  "personal"
+                ]
+              },
+              "share_eligible": {
+                "type": "boolean"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "signals": {
+            "type": "object",
+            "required": [
+              "significance",
+              "outcome",
+              "unusual",
+              "evidence_strength",
+              "contribution_to_others",
+              "humour",
+              "future_relevance"
+            ],
+            "properties": {
+              "significance": {
+                "type": "number"
+              },
+              "outcome": {
+                "type": "number"
+              },
+              "unusual": {
+                "type": "number"
+              },
+              "evidence_strength": {
+                "type": "number"
+              },
+              "contribution_to_others": {
+                "type": "number"
+              },
+              "humour": {
+                "type": "number"
+              },
+              "future_relevance": {
+                "type": "number"
+              },
+              "rationale": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "mode",
+          "read"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "direct",
+              "indirect",
+              "awaiting_input",
+              "unavailable",
+              "not_selected"
+            ]
+          },
+          "read": {
+            "type": "string"
+          },
+          "limits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "material": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "redactions": {
+      "type": "object",
+      "required": [
+        "people",
+        "terms"
+      ],
+      "properties": {
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "role"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "term",
+              "generic"
+            ],
+            "properties": {
+              "term": {
+                "type": "string"
+              },
+              "generic": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "missed_areas_check": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_loops": {
+      "type": "object",
+      "required": [
+        "enabled",
+        "no_visible_reply",
+        "caveats"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "tagged_total": {
+          "type": "number"
+        },
+        "considered": {
+          "type": "number"
+        },
+        "left_out_private_or_sensitive": {
+          "type": "number"
+        },
+        "no_visible_reply": {
+          "type": "number"
+        },
+        "direct_questions_among_them": {
+          "type": "number"
+        },
+        "reacted_but_not_replied": {
+          "type": "number"
+        },
+        "age_bands": {
+          "type": "object"
+        },
+        "caveats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

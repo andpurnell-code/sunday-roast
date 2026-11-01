@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sunday Roast report",
+  "type": "object",
+  "required": ["meta", "chef", "verdict", "sections"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["week_label", "tagline"],
+      "properties": {"week_label": {"type": "string"}, "tagline": {"type": "string"}, "positioning": {"type": "string"}, "domain": {"type": "string"}, "gap_note": {"type": "string"}}
+    },
+    "chef": {"type": "object", "required": ["state"], "properties": {"state": {"type": "string"}, "reason": {"type": "string"}}},
+    "verdict": {
+      "type": "object",
+      "required": ["text", "share"],
+      "properties": {"text": {"type": "string"}, "share": {"type": "object", "required": ["text", "include"], "properties": {"text": {"type": "string"}, "include": {"type": "boolean"}}}}
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "title", "paragraphs", "workstream_ids", "share"],
+        "properties": {
+          "key": {"type": "string", "enum": ["starter", "main", "side", "burnt", "leftovers", "compliments", "bill", "specials"]},
+          "title": {"type": "string"},
+          "paragraphs": {"type": "array", "items": {"type": "string"}},
+          "items": {"type": "array", "items": {"type": "string"}},
+          "workstream_ids": {"type": "array", "items": {"type": "string"}},
+          "disclosure": {
+            "type": "object",
+            "properties": {
+              "sources": {"type": "array", "items": {"type": "object", "required": ["name"], "properties": {"name": {"type": "string"}, "url": {"type": "string"}, "opened": {"type": "boolean"}}}},
+              "observed": {"type": "array", "items": {"type": "string"}},
+              "inferred": {"type": "array", "items": {"type": "string"}},
+              "uncertainty": {"type": "array", "items": {"type": "string"}},
+              "dates": {"type": "string"}
+            }
+          },
+          "share": {"type": "object", "required": ["text", "include"], "properties": {"text": {"type": "string"}, "include": {"type": "boolean"}}}
+        }
+      }
+    }
+  }
+}

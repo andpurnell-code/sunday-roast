@@ -1,0 +1,76 @@
+{
+  "_note": "Tone tags for the report's chef.state field. No illustration is shown in the report.",
+  "fallback": "chef-default",
+  "states": {
+    "chef-default": {
+      "when": "A calm, ordinary week with no standout theme. The safe fallback.",
+      "themes": [
+        "fallback",
+        "mixed week",
+        "no clear theme"
+      ]
+    },
+    "chef-cooking": {
+      "when": "The week's story is something made: a build, a prototype, a plan taking shape.",
+      "themes": [
+        "building",
+        "making",
+        "prototype",
+        "shipping in progress"
+      ]
+    },
+    "chef-celebrating": {
+      "when": "A clear win: something shipped, a decision landed well, recognition earned.",
+      "themes": [
+        "win",
+        "shipped",
+        "recognition",
+        "milestone"
+      ]
+    },
+    "chef-burnt": {
+      "when": "The week's story is something that went sideways or was needlessly complicated.",
+      "themes": [
+        "setback",
+        "rework",
+        "contradiction",
+        "mess"
+      ]
+    },
+    "chef-juggling": {
+      "when": "A good week and a chaotic one at once: many things in flight and most of them kept up.",
+      "themes": [
+        "many threads",
+        "good and chaotic",
+        "context switching handled"
+      ]
+    },
+    "chef-thinking": {
+      "when": "A week of questions, decisions, investigation or changed assumptions.",
+      "themes": [
+        "learning",
+        "investigation",
+        "deciding",
+        "discovery"
+      ]
+    },
+    "chef-relaxed": {
+      "when": "A calm, steady or light week, or one with a lot of recovery in it.",
+      "themes": [
+        "quiet week",
+        "steady",
+        "time away",
+        "light touch"
+      ]
+    },
+    "chef-surprised": {
+      "when": "An unexpected turn: a surprise outcome, a reversal, something nobody planned.",
+      "themes": [
+        "surprise",
+        "reversal",
+        "unplanned",
+        "plot twist"
+      ]
+    }
+  }
+}
