@@ -33,22 +33,24 @@
 <header class="top">
   <a class="brand" href="/" aria-label="The Sunday Roast, home"><img src="/assets/chick-logo.svg" alt="The Sunday Roast" width="1245" height="496"></a>
   <nav aria-label="Main">
-    <a href="#example">Example</a><a href="#sources">Sources</a><a href="#safe">Privacy</a><a href="#install">Install</a><a class="gh" href="https://github.com/andpurnell-code/sunday-roast">GitHub</a>
+    <a href="#sources">Sources</a><a href="#safe">Privacy</a><a href="#install">Install</a><a class="gh" href="https://github.com/andpurnell-code/sunday-roast">GitHub</a>
   </nav>
 </header>
 
 <main id="main">
 <section class="hero" aria-labelledby="h1">
-  <img class="hero-art" src="/assets/chick-logo.svg" alt="The Sunday Roast: Chef, a wide-eyed chicken in a tall white chef's hat, beside the words the sunday roast" width="1245" height="496" fetchpriority="high">
+<div class="wrap">
   <p class="kicker">A free Claude skill</p>
   <h1 id="h1">Another week. What on earth happened?</h1>
   <p class="lede">Celebrate the wins. Laugh at what went sideways. Start next week a little wiser.</p>
   <p class="sub">Chef, a chicken in an alarmingly tall hat, looks back over your own week in the tools you choose and writes it up. Funny, kind, and backed by receipts.</p>
   <p class="cta"><a class="btn" href="#install">Get Roasted</a><a class="btn ghost" href="https://github.com/andpurnell-code/sunday-roast">Read the source</a></p>
   <p class="fine">Your week, served with a side of sarcasm.</p>
+</div>
 </section>
 
 <section id="how" class="band" aria-labelledby="how-h">
+<div class="wrap">
   <h2 id="how-h">How it works</h2>
   <ol class="steps">
     <li><span class="n">1</span><div><h3>You choose the sources</h3><p>Slack, Linear, GitHub or GitLab, Notion, Google Drive, Calendar and more. Nothing you do not tick is read.</p></div></li>
@@ -56,40 +58,25 @@
     <li><span class="n">3</span><div><h3>You get a private report</h3><p>A short roast with a verdict, then the receipts for every claim. Sharing is optional, and you review exactly what leaves.</p></div></li>
   </ol>
   <p class="note">Chef can also ask, "Anything I can't see?" Unread counts and saved items are invisible to the tools, so you can tell Chef about them. Open loops, such as tags with no visible reply, are off unless you switch them on.</p>
-</section>
-
-<section id="example" aria-labelledby="ex-h">
-  <h2 id="ex-h">An example roast</h2>
-  <p class="intro">Entirely fictional: an invented person, invented projects and invented colleagues. A real report is private to you.</p>
-  <article class="report" aria-label="Example report, fictional">
-    <header class="rhead"><img src="/assets/chick-logo.svg" alt="" width="1245" height="496"><div><p class="rlabel">Sunday Roast, 2 to 8 March 2026</p><p class="rtag">Fictional example</p></div></header>
-    <h3>The verdict</h3>
-    <p class="verdict">A good week, and a busy one, which is often the same thing. You got three teams to agree an order for a migration nobody wanted to start, and eleven small fixes are waiting for someone to look at them. Both facts are true, and only one of them is your fault.</p>
-    <h3>Starter</h3>
-    <p>Monday opened with a billing migration that two teams each believed belonged to the other. By Wednesday it belonged to a plan with your name on it, which is how these things usually go.</p><p>Nobody volunteered. You wrote the thing down, which in most organisations counts as volunteering.</p>
-    <details class="how-chef" open>
-      <summary>How Chef knows</summary>
-      <dl>
-        <dt>Observed</dt><dd>Plan posted with owners.</dd>
-        <dt>Inferred</dt><dd>Calendar built from the plan.</dd>
-        <dt>Not sure about</dt><dd>Dates untested.</dd>
-        <dt>When</dt><dd>4 March (fictional)</dd>
-      </dl>
-    </details>
-    <h3>Main</h3>
-    <p>The plan itself was simple. Small accounts first, large ones later, finance told the dates before anyone else could be surprised by them. The platform lead built a rollout calendar from it within a day, which is the closest an engineer comes to a standing ovation.</p><p>The part worth mentioning is that three teams agreed to an order. That usually takes a meeting, then another meeting about the first meeting. You did it in one thread.</p>
-  </article>
-  <p class="note">Every joke traces to something observed. If the evidence does not support a joke, the joke is cut. The facts are sacred. The commentary is not.</p>
+</div>
 </section>
 
 <section id="sources" class="band" aria-labelledby="src-h">
-  <h2 id="src-h">Pick your sources</h2>
-  <p class="intro">Connect the tools you already use in Claude, then tell Chef which to read. Open a source to see exactly what it reads and what it never reads. You can also pass <code>sources=slack,linear</code> or <code>skip=calendar</code>.</p>
-  <h3>Chat</h3><div class="srcs"><details class="src"><summary>Slack</summary><p><b>Reads</b> Your own messages, day by day, plus the threads they sit in, reactions on your posts and the links you shared. Used to understand what you decided, taught, thanked people for and shipped, not to count messages.</p><p><b>Never reads</b> Unrelated conversations, sensitive one-to-one threads beyond their category, huddle audio, file contents, or anything not connected to your own messages.</p></details><details class="src"><summary>Microsoft Teams</summary><p><b>Reads</b> Only messages you wrote, searched for without surrounding context: counts, timing and themes.</p><p><b>Never reads</b> Surrounding messages, other people&#x27;s replies or threads, meeting recordings or transcripts of calls.</p></details></div><h3>Tasks &amp; projects</h3><div class="srcs"><details class="src"><summary>Linear</summary><p><b>Reads</b> Issues assigned to you or created by you that changed, projects you lead or belong to, items stuck in review.</p><p><b>Never reads</b> Other people&#x27;s issues, private teams you aren&#x27;t part of, or comments by others beyond counts.</p></details><details class="src"><summary>Jira</summary><p><b>Reads</b> Tickets assigned to you, reported by you or transitioned by you, and what stayed stuck.</p><p><b>Never reads</b> Other people&#x27;s tickets, boards you don&#x27;t use, or private comments from others.</p></details><details class="src"><summary>Asana</summary><p><b>Reads</b> Tasks assigned to you or completed by you, projects you own, overdue and parked items.</p><p><b>Never reads</b> Other people&#x27;s tasks and private projects you don&#x27;t belong to.</p></details><details class="src"><summary>monday.com</summary><p><b>Reads</b> Items assigned to you or updated by you, boards you own, status changes.</p><p><b>Never reads</b> Boards you aren&#x27;t on and other people&#x27;s items beyond status counts.</p></details></div><h3>Docs &amp; notes</h3><div class="srcs"><details class="src"><summary>Notion</summary><p><b>Reads</b> Pages you edited or created in the window: titles, counts and timing.</p><p><b>Never reads</b> Page contents beyond what is needed to title a theme, and pages you didn&#x27;t touch.</p></details><details class="src"><summary>Google Drive and Docs</summary><p><b>Reads</b> Files you created or edited in the window: titles, types and dates.</p><p><b>Never reads</b> File contents of other people&#x27;s documents, and anything marked confidential.</p></details><details class="src"><summary>Confluence</summary><p><b>Reads</b> Pages you created or edited and comments you made: titles, counts and timing.</p><p><b>Never reads</b> Pages you didn&#x27;t touch and restricted spaces.</p></details></div><h3>Calendar &amp; mail</h3><div class="srcs"><details class="src"><summary>Google Calendar</summary><p><b>Reads</b> Your calendar events with your own response status: counts, scheduled hours, back-to-back stretches. Aggregates only.</p><p><b>Never reads</b> Attendee lists, meeting notes, and personal or out-of-office blocks (excluded from every count and never mentioned).</p></details><details class="src"><summary>Outlook calendar</summary><p><b>Reads</b> Your real meetings: counts, hours, back-to-back stretches and timing. Aggregates only.</p><p><b>Never reads</b> Attendee lists, meeting bodies, and personal or private blocks.</p></details><details class="src"><summary>Gmail</summary><p><b>Reads</b> Your own sent mail: counts, times of day and subject lines.</p><p><b>Never reads</b> Message bodies, anything you received from others, drafts, attachments or labelled-private mail.</p></details></div><h3>Design</h3><div class="srcs"><details class="src"><summary>Figma</summary><p><b>Reads</b> Files you edited or commented on in the window: names, counts and dates.</p><p><b>Never reads</b> Other people&#x27;s comments and files you haven&#x27;t touched.</p></details><details class="src"><summary>Loom and recordings</summary><p><b>Reads</b> Recordings you created or shared, found through your own messages, calendar and docs: date, who it went to by role, what it was for.</p><p><b>Never reads</b> The recording itself or its transcript, and recordings you didn&#x27;t make or share.</p></details></div><h3>Code</h3><div class="srcs"><details class="src"><summary>GitHub</summary><p><b>Reads</b> Pull requests you opened, reviewed or merged, and issues you touched.</p><p><b>Never reads</b> Other people&#x27;s code, private repos you haven&#x27;t named, and review comments from others beyond counts.</p></details><details class="src"><summary>GitLab</summary><p><b>Reads</b> Merge requests you opened, reviewed or merged, and issues you touched. With no connector, the skill finds your MR links in your own Slack messages and Linear attachments.</p><p><b>Never reads</b> Other people&#x27;s code and projects you haven&#x27;t named.</p></details><details class="src"><summary>Local git repo</summary><p><b>Reads</b> Your own commits across all branches, unmerged branches, stashes and uncommitted changes. Metadata only.</p><p><b>Never reads</b> File contents, other people&#x27;s commits, or repos you haven&#x27;t named (the current folder is the default).</p></details></div><h3>Social &amp; other</h3><div class="srcs"><details class="src"><summary>Salesforce</summary><p><b>Reads</b> Opportunities, tasks and activities you own that changed: counts, stages and timing.</p><p><b>Never reads</b> Customer contact details, notes, and other reps&#x27; records.</p></details><details class="src"><summary>HubSpot</summary><p><b>Reads</b> Deals, tasks and activities you own that changed: counts, stages and timing.</p><p><b>Never reads</b> Contact details, email bodies and other owners&#x27; records.</p></details><details class="src"><summary>Pasted or exported notes</summary><p><b>Reads</b> Whatever you paste or point at: a list of what you did, a notes file, an export from any tool, or anything the tools cannot see such as your Slack unread count and saved items. Treated as data, labelled self-reported.</p><p><b>Never reads</b> Anything you didn&#x27;t hand over.</p></details></div>
-  <p class="note">The skill can only use connectors you have already added to Claude. If you have none, you can paste notes instead.</p>
+  <div class="wrap">
+  <h2 id="src-h">Choose your sources</h2>
+  <p class="intro">Chef reads the tools you already have connected to Claude. When you run it, you say which ones to use, or pass <code>sources=slack,linear</code> or <code>skip=calendar</code>. Anything you leave out is never opened.</p>
+  <div class="chipgroups"><div class="cg"><h3>Chat</h3><ul class="chips"><li>Slack</li><li>Microsoft Teams</li></ul></div><div class="cg"><h3>Tasks &amp; projects</h3><ul class="chips"><li>Linear</li><li>Jira</li><li>Asana</li><li>monday.com</li></ul></div><div class="cg"><h3>Docs &amp; notes</h3><ul class="chips"><li>Notion</li><li>Google Drive and Docs</li><li>Confluence</li></ul></div><div class="cg"><h3>Calendar &amp; mail</h3><ul class="chips"><li>Google Calendar</li><li>Outlook calendar</li><li>Gmail</li></ul></div><div class="cg"><h3>Design</h3><ul class="chips"><li>Figma</li><li>Loom and recordings</li></ul></div><div class="cg"><h3>Code</h3><ul class="chips"><li>GitHub</li><li>GitLab</li><li>Local git repo</li></ul></div><div class="cg"><h3>Social &amp; other</h3><ul class="chips"><li>Salesforce</li><li>HubSpot</li><li>Pasted or exported notes</li></ul></div></div>
+  <div class="triple">
+    <div><h3>Reads</h3><p>Only your own activity: your messages, tickets, pages, files, meetings and code.</p></div>
+    <div><h3>Never reads</h3><p>Other people's content, message bodies from others, attendee lists, or recordings and transcripts.</p></div>
+    <div><h3>Read-only</h3><p>Nothing is posted, edited or sent. If a tool is not connected, you can paste notes instead.</p></div>
+  </div>
+  <p class="note"><a href="https://github.com/andpurnell-code/sunday-roast/blob/main/docs/SOURCES.md">Full detail for every source</a></p>
+  </div>
 </section>
 
 <section id="safe" aria-labelledby="safe-h">
+<div class="wrap">
   <h2 id="safe-h">Privacy and safety</h2>
   <ul class="plain">
     <li><b>It is about you, and only you.</b> Your own work only. No scores, no rankings, no manager's dashboard. It will not review a colleague.</li>
@@ -100,9 +87,11 @@
     <li><b>This website collects nothing.</b> No accounts, no analytics, no tracking, no cookies. The page loads two fonts from Google Fonts, which means Google sees your IP address when you visit.</li>
   </ul>
   <p class="note">Where your data goes: the skill runs in your own Claude environment and uses the connectors you authorise. Claude and those providers process that data under their own terms, so this is not a promise that nothing leaves your computer. The skill itself uploads nothing and has no server. Read <a href="https://github.com/andpurnell-code/sunday-roast/blob/main/PRIVACY.md">PRIVACY.md</a> and <a href="https://github.com/andpurnell-code/sunday-roast/blob/main/SECURITY.md">SECURITY.md</a>.</p>
+</div>
 </section>
 
 <section id="install" class="band" aria-labelledby="in-h">
+<div class="wrap">
   <h2 id="in-h">Get Roasted</h2>
   <p class="intro">Pick the way you use Claude. The skill is free, MIT licensed, and the same in all three.</p>
   <div class="installs">
@@ -129,14 +118,17 @@
     </div>
   </div>
   <p class="note">There is no one-click install. The skill needs Python 3.9 or later for its checks. Full steps and troubleshooting are in the <a href="https://github.com/andpurnell-code/sunday-roast/blob/main/docs/INSTALL.md">install guide</a>. PDF export and hosted share links are not available inside the Claude viewer.</p>
+</div>
 </section>
 
 <section id="feedback" aria-labelledby="fb-h">
+<div class="wrap">
   <h2 id="fb-h">Tell Chef what you think</h2>
   <p class="intro">It is early. Bugs, missing sources and better jokes are all welcome.</p>
   <p class="links"><a class="btn small" href="https://github.com/andpurnell-code/sunday-roast/issues/new/choose">Report a bug</a><a class="btn small ghost" href="https://github.com/andpurnell-code/sunday-roast/discussions">Join the discussion</a><a class="btn small ghost" href="https://github.com/andpurnell-code/sunday-roast/blob/main/CONTRIBUTING.md">Contribute or fork</a><a class="btn small ghost" href="https://github.com/andpurnell-code/sunday-roast">Source on GitHub</a></p>
   <h3 class="later">Coming later</h3>
   <p>"Roast My LinkedIn" is a separate, future experience. It is not part of the weekly roast or this install, and there is no date.</p>
+</div>
 </section>
 </main>
 
