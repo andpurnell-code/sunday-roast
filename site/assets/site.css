@@ -45,7 +45,7 @@ h1{font-size:clamp(40px,7.4vw,72px);margin:0 auto 22px;max-width:15em}
 .inst ol{padding-left:20px;margin:0}.inst li{margin:8px 0}.inst p{margin:auto 0 0;padding-top:12px;font-size:16px}
 .inst .btn{margin:2px 0 4px}
 .cmd{display:flex;gap:8px;align-items:stretch;margin:0 0 10px}.cmd code{flex:1;min-width:0;background:var(--oat);border-radius:8px;padding:9px 10px;overflow-wrap:anywhere;font-size:13.5px;line-height:1.45;text-align:left}
-.cmd button{flex:none;font:inherit;font-size:14px;font-weight:700;background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;padding:0 12px;cursor:pointer}
+.cmd button{flex:none;align-self:flex-start;padding:8px 12px!important;font:inherit;font-size:14px;font-weight:700;background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:8px;padding:0 12px;cursor:pointer}
 .later{font-family:var(--body);margin:34px 0 6px;font-size:17px}
 section .wrap>p:not(.intro):not(.note):not(.cta):not(.links):not(.fine):not(.kicker):not(.lede):not(.sub){max-width:42em;margin-left:auto;margin-right:auto}
 footer{max-width:1080px;margin:0 auto;padding:32px 20px 56px;border-top:2px solid var(--line);font-size:15px;color:var(--muted);display:grid;gap:10px;justify-items:center;text-align:center}
